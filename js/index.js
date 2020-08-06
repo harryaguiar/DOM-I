@@ -40,3 +40,45 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Navigation Bar
+const aTag = document.querySelectorAll('a')
+let i = 0;
+aTag.forEach(a => {
+  aTag[i].style.color= 'red';
+  i++
+  a.textContent = siteContent.nav[`nav-item-${i}`]
+ 
+});
+console.log(aTag, 'navigation');
+
+// h1
+const h1Tag = document.querySelector('h1');
+h1Tag.textContent = siteContent.cta['h1'];
+
+// Button
+const buttonTag = document.querySelector('button');
+buttonTag.textContent = siteContent.cta['button'];
+
+// cta image
+const image = document.getElementById('cta-img');
+image.setAttribute('src', siteContent['cta']['img-src']);
+
+// main content features h4
+const h4s = document.querySelectorAll('h4');
+h4s[0].textContent = siteContent['main-content']['features-h4'];
+h4s[1].textContent = siteContent['main-content']['about-h4'];
+h4s[2].textContent = siteContent['main-content']['services-h4'];
+h4s[3].textContent = siteContent['main-content']['product-h4'];
+h4s[4].textContent = siteContent['main-content']['vision-h4'];
+// h4Features.textContent = siteContent.main-content['features-h4'];
+
+
+
+
+
+
+
+
+
+
