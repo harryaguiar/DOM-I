@@ -64,17 +64,38 @@ buttonTag.textContent = siteContent.cta['button'];
 const image = document.getElementById('cta-img');
 image.setAttribute('src', siteContent['cta']['img-src']);
 
-// main content features h4
+// h4s
 const h4s = document.querySelectorAll('h4');
 h4s[0].textContent = siteContent['main-content']['features-h4'];
 h4s[1].textContent = siteContent['main-content']['about-h4'];
 h4s[2].textContent = siteContent['main-content']['services-h4'];
 h4s[3].textContent = siteContent['main-content']['product-h4'];
 h4s[4].textContent = siteContent['main-content']['vision-h4'];
-// h4Features.textContent = siteContent.main-content['features-h4'];
+h4s[5].textContent = siteContent.contact['contact-h4'];
+h4s[0].style.color = 'red';
+
+// main content p tags
+const ps = document.querySelectorAll('p');
+ps[0].textContent = siteContent['main-content']['features-content'];
+ps[1].textContent = siteContent['main-content']['about-content'];
+ps[2].textContent = siteContent['main-content']['services-content'];
+ps[3].textContent = siteContent['main-content']['product-content'];
+ps[4].textContent = siteContent['main-content']['vision-content'];
 
 
 
+// main content image
+const mainImage = document.getElementById('middle-img');
+mainImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+
+// contact p
+ps[5].textContent = siteContent.contact['address'];
+ps[6].textContent = siteContent.contact['phone'];
+ps[7].textContent = siteContent.contact['email'];
+
+// footer p
+ps[8].textContent = siteContent.footer['copyright'];
 
 
 
