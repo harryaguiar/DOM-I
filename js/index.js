@@ -62,6 +62,8 @@ const h1Tag = document.querySelector('h1');
 h1Tag.textContent = siteContent.cta['h1'];
 h1Tag.style.background = "green";
 h1Tag.style.borderRadius = "10rem";
+h1Tag.style.wordWrap = "break-word";
+h1Tag.style.wordSpacing = "1000px";
 
 // Button
 const buttonTag = document.querySelector('button');
@@ -77,16 +79,20 @@ image.setAttribute('src', siteContent['cta']['img-src']);
 
 // h4s
 const h4s = document.querySelectorAll('h4');
+h4s.forEach((el) => {
+  el.style.color = "red";
+  el.style.fontSize = "xx-large";
+  el.style.textAlign = "center";
+  });
+
+
 h4s[0].textContent = siteContent['main-content']['features-h4'];
-h4s[0].style.fontSize = "xx-large";
-h4s[0].style.color = "red";
 h4s[1].textContent = siteContent['main-content']['about-h4'];
-h4s[1].style.fontSize = "xx-large";
-h4s[1].style.color = "red";
 h4s[2].textContent = siteContent['main-content']['services-h4'];
 h4s[3].textContent = siteContent['main-content']['product-h4'];
 h4s[4].textContent = siteContent['main-content']['vision-h4'];
 h4s[5].textContent = siteContent.contact['contact-h4'];
+h4s[5].style.textAlign = "left";
 
 
 
@@ -110,6 +116,9 @@ mainContent.style.paddingTop = "5px";
 
 // contact p
 ps[5].textContent = siteContent.contact['address'];
+ps[5].style.wordBreak = "break-all";
+ps[5].style.width = "140px";
+
 ps[6].textContent = siteContent.contact['phone'];
 ps[7].textContent = siteContent.contact['email'];
 
